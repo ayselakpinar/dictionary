@@ -1,0 +1,152 @@
+:root {
+    --font-base: 8px; 
+    --font-small: 4px; 
+    --font-medium: 16px; 
+    --font-large: 20px; 
+    --font-xlarge: 24px; 
+    --font-xxlarge: 32px; 
+    --color-primary: #5F225D;
+    --color-primary-dark: #7a2d79;
+    --color-secondary: #1f194c;
+    --color-light: #ffffff;
+    --color-dark: #333;
+    --color-pink: #CE67B0;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-image: url("https://wallpaperaccess.com/full/5522173.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: var(--font-large);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 var(--font-medium) rgba(0, 0, 0, 0.2);
+    padding:var(--font-xxlarge);
+    border-radius:var(--font-medium);
+}
+
+h1 {
+    font-size:var(--font-xxlarge);
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: var(--font-medium);
+}
+
+.search-box {
+    display: flex;
+    gap: var(--font-base);
+    margin-bottom: var(--font-large);
+    width: 100%;
+}
+
+.search-box input {
+    flex: 1;
+    padding: var(--font-base);
+    border: 1px solid var(--color-light);
+    border-radius: var(--font-small);
+    font-size: var(--font-large);
+    background-color: var(--color-light);
+}
+
+.search-box input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.search-box button {
+    padding:var(--font-base);
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    border-radius:var(--font-small);
+    cursor: pointer;
+    font-size: var(--font-large);
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.result {
+    margin-top: var(--font-large);
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.result h3 {
+    font-size: var(--font-xlarge);
+    color:var(--color-secondary);
+    margin-bottom: var(--font-base);
+}
+
+.result .word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--font-base);
+}
+
+.result button {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    font-size: var(--font-medium);
+    cursor: pointer;
+    padding: var(--font-small) var(--font-base);
+    border-radius: var(--font-small);
+    transition: background-color 0.3s;
+}
+
+.result button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.result .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--font-base);
+    color: var(--color-primary);
+    margin: var(--font-base) 0;
+    font-size: var(--font-medium);
+}
+
+.word-meaning {
+    color: var(--color-primary);
+    font-size: var(--font-large);
+    margin-top: var(--font-base);
+}
+
+.word-example {
+    color:var(--color-primary);
+    font-style: italic;
+    border-left: var(--font-small) solid var(--color-pink);
+    padding-left: var(--font-xlarge);
+    margin-top: var(--font-xlarge);}
+
+@media (max-width: 600px) {
+    .search-box {
+        flex-direction: column;
+        gap: var(--font-small);
+    }
+
+    .search-box button {
+        width: 100%;
+    }}
