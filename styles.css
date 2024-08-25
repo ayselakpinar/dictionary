@@ -11,8 +11,10 @@
     --color-light: #ffffff;
     --color-dark: #333;
     --color-pink: #CE67B0;
+/* Missing closing } for the root selector */
 
 * {
+    /* This selector selects all elements one by one which makes it inefficient. Therefore, we only want to add box-sizing: border-box; here. Move other styles to more specific elements (e.g. body). Margin and padding set on the body element will not propagate to its children but it's usually better not to remove default margin and padding from all elements. */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
