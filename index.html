@@ -11,7 +11,9 @@
     <audio id="sound"></audio>
     <div class="container">
         <h1>DICTIONARY</h1>
+        <!-- Use form element here instead of div -->
         <div class="search-box">
+            <!-- The input element does not have a label element attached. Sometimes, we don't want to use the label. In this case, add aria-label or aria-labelledby attribute to still make the input element accessible. -->
             <input type="text" placeholder="Type the word here..." class="txt" id="txt" />
             <button id="search-btn">Search</button>
         </div>
