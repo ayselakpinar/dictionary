@@ -8,13 +8,14 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div id="error-message" class="error-message"></div>
     <audio id="sound"></audio>
     <div class="container">
         <h1>DICTIONARY</h1>
-        <div class="search-box">
-            <input type="text" placeholder="Type the word here..." class="txt" id="txt" />
+        <form class="search-box">
+            <input type="text" placeholder="Type the word here..." class="txt" id="txt" aria-label="Search for a word"/>
             <button id="search-btn">Search</button>
-        </div>
+        </form>
         <div class="result" id="result"></div>
     </div>
 </body>
