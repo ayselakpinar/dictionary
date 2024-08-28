@@ -27,6 +27,7 @@ btn.addEventListener("click", (event) => {
         return response.json();
     })
     .then((data) => {
+        errorMessage.textContent = "";
         result.innerHTML = '';
 
         const wordDiv = document.createElement('div');
@@ -81,7 +82,12 @@ btn.addEventListener("click", (event) => {
     })
     .catch((error) => {
         console.error("Error:", error);
-        result.innerHTML = `<p>${error.message.includes('Word not found') ? "Word not found. Please try another word." : "An error occurred. Please try again later."}</p>`;
-        errorMessage.textContent = error.message;
+        result.innerHTML = ''; 
+        if (error.message === "Word not found") {
+            console.log("Word not found error caught!");
+            result.innerHTML = '<p class="error">Word not found. Please try another word.</p>';
+        } else {
+            result.innerHTML = `<p class="error">${error.message}</p>`;
+        }
     });
 });
