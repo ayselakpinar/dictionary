@@ -4,6 +4,7 @@ const sound = document.getElementById("sound");
 const btn = document.getElementById("search-btn");
 const errorMessage = document.getElementById("error-message");
 
+
 btn.addEventListener("click", (event) => {
     event.preventDefault();
     errorMessage.textContent = "";
@@ -72,11 +73,11 @@ btn.addEventListener("click", (event) => {
         playButton.addEventListener("click", () => {
             if (sound.src) {
                 sound.play().catch((error) => {
-                    console.error("Playback failed:", error);
-                    errorMessage.textContent = "Playback failed: The audio element has no supported sources or there was an issue during playback.";
-                });
+            console.error("Playback failed:", error);
+            errorMessage.textContent = "Playback failed: The audio element has no supported sources or there was an issue during playback.";
+    });
             } else {
-                errorMessage.textContent = "No valid audio source available.";
+             errorMessage.textContent = "No valid audio source available.";
             }
         });
     })
